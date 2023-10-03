@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:new_project_nintendodb/layout_mobile_screen_1.dart';
 
 class LayoutMobileScreen0 extends StatefulWidget {
   const LayoutMobileScreen0({super.key});
+  
   @override
   State<LayoutMobileScreen0> createState() => _StateLayoutMobileScreen0();
 }
@@ -16,14 +18,28 @@ class _StateLayoutMobileScreen0 extends State<LayoutMobileScreen0> {
           title: const Text('Nintendo DB'),
       ),
       body: ListView(
-        children: const <Widget>[
-          ListTile(title: Text('Personatges')),
-          Divider(height: 0),
-          ListTile(title: Text('Jocs')),
-          Divider(height: 0),
-          ListTile(title: Text('Consoles')),
-        ],
+              children: <Widget>[
+                          ListTile(
+                                        title: const Text('Personatges'),
+                                        onTap: () => _navigateTo(context, 'Personatges'),
+                                        ),
+                          const Divider(height: 0),
+                          ListTile(
+                                        title: const Text('Jocs'),
+                                        onTap: () => _navigateTo(context, 'Jocs'),
+                                        ),
+                          const Divider(height: 0),
+                          ListTile(
+                                        title: const Text('Consoles'),
+                                        onTap: () => _navigateTo(context, 'Consoles'),
+                          ),
+              ],
       ),
+
     );
   }
+void _navigateTo (BuildContext context, String value) {
+Navigator.of(context).push(MaterialPageRoute(
+builder: (context) => LayoutMobileScreen1(seccio: value)));
+}
 }

@@ -1,8 +1,9 @@
-import 'dart:io';
-
+import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
-import 'package:new_project_nintendodb/app.dart';
+import 'package:provider/provider.dart';
 import 'package:window_manager/window_manager.dart';
+import 'app.dart';
+import 'app_data.dart';
 
 void main() async {
   try {
