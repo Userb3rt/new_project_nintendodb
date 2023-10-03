@@ -17,7 +17,7 @@ class AppData with ChangeNotifier {
                 case 'Personatges': return readyPersonatges;
         }
         return false;
-        }
+    }
         
     dynamic getData (String type) {
           switch (type) {
@@ -28,6 +28,12 @@ class AppData with ChangeNotifier {
           return;
     }
 
+    dynamic getItemData (String type, int index) {
+            if (dataReady(type)) {
+                    return getData(type)[index];
+            }
+            return;
+    }
 
 
     void load (String type) async {

@@ -20,24 +20,25 @@ class _StateLayoutMobileScreen0 extends State<LayoutMobileScreen0> {
       body: ListView(
               children: <Widget>[
                           ListTile(
-                                        title: const Text('Personatges'),
-                                        onTap: () => _navigateTo(context, 'Personatges'),
+                                  title: const Text('Personatges'),
+                                  onTap: () => _navigateTo(context, 'Personatges'),
                                         ),
                           const Divider(height: 0),
                           ListTile(
-                                        title: const Text('Jocs'),
-                                        onTap: () => _navigateTo(context, 'Jocs'),
+                                  title: const Text('Jocs'),
+                                  onTap: () => _navigateTo(context, 'Jocs'),
                                         ),
                           const Divider(height: 0),
                           ListTile(
-                                        title: const Text('Consoles'),
-                                        onTap: () => _navigateTo(context, 'Consoles'),
+                                  title: const Text('Consoles'),
+                                  onTap: () => _navigateTo(context, 'Consoles'),
                           ),
               ],
       ),
 
     );
   }
+  
 void _navigateTo (BuildContext context, String value) {
 Navigator.of(context).push(MaterialPageRoute(
 builder: (context) => LayoutMobileScreen1(seccio: value)));

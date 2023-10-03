@@ -16,7 +16,11 @@ void main() async {
   } catch (e){
     print(e);
   }
-  runApp(const App());
+  runApp(ChangeNotifierProvider(
+        create: (context) => AppData(),
+        child: const App(),
+        ),
+  );
 }
 
 void showWindow (_) async {
