@@ -53,9 +53,7 @@ class _StateLayoutMobileScreen1 extends State<LayoutMobileScreen1> {
                   );
             }
         }
-
-
-    
+            
         return Scaffold(
                 appBar: AppBar(
                     backgroundColor: Theme.of(context).colorScheme.inversePrimary,

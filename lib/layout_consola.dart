@@ -1,15 +1,14 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class LayoutConsola extends StatelessWidget{
   final dynamic itemData;
 
   final Map<String, Color> colorMap = {
-            'red': Colors.red,
-            'blue': Colors.blue,
-            'green': Colors.green,
-            'orange': Colors.orange,
-            'brown': Colors.brown,
-            'grey': Colors.grey,
+            'black': Colors.black,
+            'purple': Colors.purple,
+            'white': Colors.white,
       };
 
   LayoutConsola({Key? key, required this.itemData}) : super(key: key);
@@ -38,9 +37,11 @@ class LayoutConsola extends StatelessWidget{
                   children: [
                     Text("${itemData['nom']}",style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                     const SizedBox(height: 10),
-                    Container(width: 10, height: 10, color: getColorFromString(itemData['color']), ),
+                    Container(width: 10, height: 10, color: getColorFromString(itemData['color']),),
+                    Text("${itemData['data']}",style: const TextStyle(fontSize: 15, color: Colors.grey )),
                     const SizedBox(height: 10),
-                    Text(itemData['procesador']),
+                    Text(itemData['procesador'],style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+                    Text(itemData["venudes"].toString()+" venudes")
                   ],
                 ),
               ),
