@@ -9,6 +9,11 @@ class LayoutMobileScreen0 extends StatefulWidget {
 }
 
 class _StateLayoutMobileScreen0 extends State<LayoutMobileScreen0> {
+  void _navigateTo (BuildContext context, String value) {
+  Navigator.of(context).push(MaterialPageRoute(
+  builder: (context) => LayoutMobileScreen1(seccio: value)));
+  }
+
   _StateLayoutMobileScreen0();
   @override
   Widget build(BuildContext context) {
@@ -38,9 +43,4 @@ class _StateLayoutMobileScreen0 extends State<LayoutMobileScreen0> {
 
     );
   }
-  
-void _navigateTo (BuildContext context, String value) {
-Navigator.of(context).push(MaterialPageRoute(
-builder: (context) => LayoutMobileScreen1(seccio: value)));
-}
 }

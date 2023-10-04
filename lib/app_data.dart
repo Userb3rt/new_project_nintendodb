@@ -43,7 +43,6 @@ class AppData with ChangeNotifier {
                 case 'Jocs': arxiu = "assets/data/jocs.json"; break;
                 case 'Personatges': arxiu = "assets/data/personatges.json"; break;
           }
-
           await Future.delayed(const Duration(seconds: 1));
           var textArxiu = await rootBundle.loadString(arxiu);
           var dadesArxiu = json.decode(textArxiu);

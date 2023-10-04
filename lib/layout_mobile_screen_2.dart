@@ -13,9 +13,17 @@ const LayoutMobileScreen2({Key? key, required this.seccio, required this.index})
 State<LayoutMobileScreen2> createState() => _StateLayoutMobileScreen2();
 }
 
+
+
 class _StateLayoutMobileScreen2 extends State<LayoutMobileScreen2> {
       _StateLayoutMobileScreen2();
-      // Aquí falta la funció ‘_setBody’ definida a la següent diapositiva
+            Widget _setBody(BuildContext context, dynamic itemData) {
+                  switch (widget.seccio) {
+                        case 'Personatges': return LayoutPersonatge(itemData: itemData);
+                  }
+                  return Text('Unknown layout: ${widget.seccio}');
+            }
+
       @override
       Widget build(BuildContext context) {
             // Referència a l’objecte que gestiona les dades de l’aplicació
@@ -39,12 +47,6 @@ class _StateLayoutMobileScreen2 extends State<LayoutMobileScreen2> {
                         body: _setBody(context, itemData)
                   );
             }
-      }
-      Widget _setBody(BuildContext context, dynamic itemData) {
-            switch (widget.seccio) {
-                  case 'Personatges': return LayoutPersonatge(itemData: itemData);
-            }
-            return Text('Unknown layout: ${widget.seccio}');
       }
 
 }
